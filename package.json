@@ -10,7 +10,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --outDir ./js/"
+    "build": "tsc --outDir ./js/",
+    "clean-build": "tsc --outDir ./js/ && echo [{\"name\":\"Ivory Backscratcher\",\"gold\":1,\"silver\":0,\"copper\":0}] > store/loot.json"
   },
   "author": "",
   "license": "ISC"

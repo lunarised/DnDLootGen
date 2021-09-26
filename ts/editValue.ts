@@ -34,8 +34,9 @@ export const editValueOfItem = (name: String, val: Value) => {
 		silver: val.silver,
 		copper: val.copper,
 	};
+
 	let lootListFiltered = lootList.filter(function (value, index, arr) {
-		return value.name.toLocaleLowerCase() !== name.toLowerCase();
+		return value.name.toLocaleLowerCase() !== matchList[0].name.toLowerCase();
 	});
 	lootListFiltered.push(newItem);
 	lootJSON = JSON.stringify(lootListFiltered);

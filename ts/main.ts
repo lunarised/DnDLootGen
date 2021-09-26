@@ -2,6 +2,7 @@ import { generateLoot } from "./gen";
 import { addLoot } from "./add";
 import { Base10ToGSC, GSCToBase10 } from "./helpers";
 import { listItemsInStore } from "./listItems";
+import { editValueOfItem } from "./editValue";
 
 const myArgs: String[] = process.argv;
 const command = myArgs[2];
@@ -28,6 +29,7 @@ switch (command) {
 			silver: Number(myArgs[5]),
 			copper: Number(myArgs[6]),
 		};
+		editValueOfItem(item, value);
 		break;
 	case "gen":
 		value = {
